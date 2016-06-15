@@ -29,9 +29,9 @@ public class WhenTheUserEntersAnInitialGrid {
 
 
     final static String[][] EMPTY_GRID
-            = new String[][]{{".", ".", "."},
-            {".", ".", "."},
-            {".", ".", "."}};
+            = new String[][]{{"0", "0", "0"},
+            {"0", "0", "0"},
+            {"0", "0", "0"}};
 
 
     @Test
@@ -65,9 +65,9 @@ public class WhenTheUserEntersAnInitialGrid {
         player.clicks_on_cell_at(1, 1);
         player.starts_simulation();
 
-        String[][] expectedGrid = new String[][]{{".", ".", "."},
-                {".", "*", "."},
-                {".", ".", "."}};
+        String[][] expectedGrid = new String[][]{{"0", "0", "0"},
+                {"0", "#", "0"},
+                {"0", "0", "0"}};
 
         player.should_see_grid(expectedGrid);
     }
@@ -81,9 +81,9 @@ public class WhenTheUserEntersAnInitialGrid {
         player.clicks_on_cell_at(1, 1);
         player.starts_simulation();
 
-        String[][] expectedGrid = new String[][]{{"*", "*", "."},
-                {".", "*", "."},
-                {".", ".", "."}};
+        String[][] expectedGrid = new String[][]{{"#", "#", "0"},
+                {"0", "#", "0"},
+                {"0", "0", "0"}};
 
         player.should_see_grid(expectedGrid);
     }
